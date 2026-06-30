@@ -1,0 +1,16 @@
+{
+  "name": "negrobot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "highrise-js-sdk": "^2.2.0",
+    "highrise.sdk.dev": "^2.4.0"
+  }
+}
