@@ -202,6 +202,16 @@ botChat.on("chatCreate", async (user, message) => {
 botChat.on("error", (msg) => console.log("Error ChatBot: ", msg));
 botBailes.on("error", (msg) => console.log("Error DanceBot: ", msg));
 
+// 🌐 SERVIDOR WEB FALSO PARA QUE RENDER NO APAGUE EL BOT
+const http = require("http");
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Bot Online 24/7");
+});
+server.listen(process.env.PORT || 3000, () => {
+    console.log("🌐 Servidor de respaldo activo para Render.");
+});
+
 // =========================================================================
 // 🔑 INICIO DE SESIÓN OFICIAL CON TUS TOKENS DIRECTOS
 // =========================================================================
