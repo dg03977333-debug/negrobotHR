@@ -65,7 +65,7 @@ function iniciarLoopBaile(userId, emote) {
             clearInterval(intervalo);
             jugadoresBailando.delete(userId);
         });
-    }, 5000); 
+    }, 10000); 
     jugadoresBailando.set(userId, intervalo);
 }
 
@@ -111,7 +111,7 @@ botBailes.on("chatCreate", async (user, message) => {
 botChat.on("ready", (session) => {
     console.log("💬 Bot 2 (Mensajes) Conectado con éxito.");
     botChat.selfId = session.userId;
-    setInterval(() => { botChat.message.send("TUMEGUSTAS").catch(() => {}); }, 120000);
+    setInterval(() => { botChat.message.send("TUMEGUSTAS").catch(() => {}); }, 140000);
 });
 
 botChat.on("playerJoin", (user, position) => {
@@ -142,7 +142,7 @@ botChat.on("chatCreate", async (user, message) => {
         return;
     }
 
-    if (message === "!miwacha") return botChat.message.send("💎💘 ¡LAS WACHAS DEL NEGRO OOOOAAAAA! 🔥✨");
+    if (message === "!uwu") return botChat.message.send("💎💘ONICHAAAAAAAAAAAAAN🔥✨");
 
     if (message.startsWith("!spam ") || message.startsWith("spam ")) {
         if (intervaloSpam !== null) return botChat.message.send("⚠️ Frená el anterior con !stopspam.");
@@ -194,9 +194,9 @@ botChat.on("chatCreate", async (user, message) => {
     }
 
     // 📍 TELETRANSPORTES FIJOS
-    if (message === "!tp 1") return botChat.player.teleport(user.id, 5.5, 0.5, 3.5).catch(() => {});
-    if (message === "!tp 2") return botChat.player.teleport(user.id, 2.0, 10.0, 2.0).catch(() => {});
-    if (message === "!tp 3") return botChat.player.teleport(user.id, 0.0, 0.0, 0.0).catch(() => {});
+    if (message === "!piso 1") return botChat.player.teleport(user.id, 10.0, 8.0, 19.0).catch(() => {});
+    if (message === "!piso 0") return botChat.player.teleport(user.id, 13.0, 0.0, 0.0).catch(() => {});
+    if (message === "!juego") return botChat.player.teleport(user.id, 10.0, 0.5, 10.0).catch(() => {});
 });
 
 botChat.on("error", (msg) => console.log("Error ChatBot: ", msg));
